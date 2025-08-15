@@ -1,12 +1,17 @@
 ---
 layout: base
-title: I'm [Your Full Name]
+title: I'm Krishna Visvanath
 hide: true
 ---
+<style>
+
+
+</style>
+
 
 ### Me and Team
 
-Hi! My name is [Your Full Name].
+Hi! My name is Krishna Visvanath 🖤.
 
 | Role         | Name     | Repo Location                       | Stream                | Repo Name |
 |--------------|----------|-------------------------------------|-----------------------|-----------|
@@ -39,13 +44,15 @@ Hi! My name is [Your Full Name].
 
 ### Class Progress
 
-<a href="{{site.baseurl}}/snake" class="button small" style="background-color: #6b4bd3ff">
+<a href="{{site.baseurl}}/snake" class="button small" style="background-color: #e60a0aff">
     Snake Game
 </a>
-<a href="{{site.baseurl}}/turtle" class="button small" style="background-color: #2A7DB1">
+<a href="{{site.baseurl}}/turtle" class="button small" style="background-color: #e60a0aff">
     <span style="color: #000000">Turtle</span>
 </a>
-
+<a href="https://youtu.be/iQK6yNVGyas?si=rigYxShiq5LyGIUi" class="button small" style="background-color: #e60a0aff">
+    <span style="color: #000000">banger song</span>
+</a>
 <br>
 
 <!-- Contact Section -->
