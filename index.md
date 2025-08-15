@@ -45,7 +45,7 @@ Hi! My name is Krishna Visvanath 🖤.
 ### Class Progress
 
 <a href="{{site.baseurl}}/snake" class="button small" style="background-color: #e60a0aff">
-    Snake Game
+    <span style="color: #000000">Snake Game</span>
 </a>
 <a href="{{site.baseurl}}/turtle" class="button small" style="background-color: #e60a0aff">
     <span style="color: #000000">Turtle</span>
