@@ -9,8 +9,6 @@ comments: true
 
 Here are some places I have lived.
 
-if this mango shows up below this text i'm keeping it as a memento to figuring out images. maybe. we'll see. ![imageee] (https://s7d5.scene7.com/is/image/CentralMarket/000321109-1?hei=124&wid=124&$large$&DefaultImage=1111111111 "mango test image please work")
-
 <comment>
 Flags are made using Wikipedia images
 </comment>
