@@ -5,14 +5,24 @@ permalink: /about/
 comments: true
 ---
 
-## As a conversation Starter
+# As a conversation Starter
 
-Here are some places I have lived.
+## Here are some of my interests .
 
 <comment>
-Flags are made using Wikipedia images
+i'll figure out images when i get home
 </comment>
 
+- Music
+- Painting
+- Sewing
+- Beadwork
+- Fashion
+- Taco Bell. I love taco bell.
+
+<comment>
+my cultural places
+<comment>
 <style>
     /* Style looks pretty compact, 
        - grid-container and grid-item are referenced the code 
@@ -55,15 +65,12 @@ Flags are made using Wikipedia images
 
 <script>
     // 1. Make a connection to the HTML container defined in the HTML div
-    var container = document.getElementById("grid_container"); // This container connects to the HTML div
-
+    var container = document.getElementById("grid_container"); // This container connects to the HTML
     // 2. Define a JavaScript object for our http source and our data rows for the Living in the World grid
     var http_source = "https://upload.wikimedia.org/wikipedia/commons/";
     var living_in_the_world = [
         {"flag": "0/01/Flag_of_California.svg", "greeting": "Hey", "description": "California - forever"},
-        {"flag": "b/b9/Flag_of_Oregon.svg", "greeting": "Hi", "description": "Oregon - 9 years"},
-        {"flag": "b/be/Flag_of_England.svg", "greeting": "Alright mate", "description": "England - 2 years"},
-        {"flag": "e/ef/Flag_of_Hawaii.svg", "greeting": "Aloha", "description": "Hawaii - 2 years"},
+        {"flag": "<p><a href="https://en.wikipedia.org/wiki/File:Flag_of_India.svg#/media/File:Flag_of_India.svg"><img src="https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg" alt="Flag of India.svg" height="600" width="900"></a><br><a href="//en.wikipedia.org/wiki/File:Flag_of_India.svg" title="Public domain in India">PD-India</a>, <a href="https://en.wikipedia.org/w/index.php?curid=23473510">Link</a></p>", "greeting": "Namaste or Namaskaram", "description": "Never lived here but my parents immigrated over in 2003"},
     ];
 
     // 3a. Consider how to update style count for size of container
@@ -99,9 +106,9 @@ Flags are made using Wikipedia images
 
 ### Journey through Life
 
-Here is what I did at those places
+How I Got to Where I Am
 
-- 🏫 Lots of Elementary Schools in Tucson, LA, Honolulu, and Glendale (CA)
+- 🏫 Elementary School at Stone Ranch Elementary School
 - 🏫 Middle and High School in Glendale (CA), Hoover High graduated '77
 - 🎓 Glendale CA Community College, UCLA Extension, LA Wilshire Computer Tech School '77 to '79
 - ⛪ England, London Missionary for Church of Jesus Christ of Latter-day Saints '79 to '81
@@ -123,7 +130,7 @@ Everything for me, as for many others, revolves around family and faith.
 Gallery of Pics, scroll to the right for more ...
 </comment>
 <div class="image-gallery">
-  <img src="{{site.baseurl}}/images/about/missionary.jpg" alt="Image 1">
+  <img src="e.baseurl}}/images/about/missionary.jpg" alt="Image 1">
   <img src="{{site.baseurl}}/images/about/john_tamara.jpg" alt="Image 2">
   <img src="{{site.baseurl}}/images/about/tamara_fam.jpg" alt="Image 3">
   <img src="{{site.baseurl}}/images/about/surf.jpg" alt="Image 4">
