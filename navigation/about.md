@@ -5,6 +5,7 @@ permalink: /about/
 comments: true
 ---
 
+my beautiful mango ![mango] (https://s7d5.scene7.com/is/image/CentralMarket/000321109-1?hei=124&wid=124&$large$&DefaultImage=1111111111)
 ## As a conversation Starter
 
 Here are some places I have lived.
