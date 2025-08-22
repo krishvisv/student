@@ -5,7 +5,6 @@ permalink: /about/
 comments: true
 ---
 
-my beautiful mango ![mango] (https://s7d5.scene7.com/is/image/CentralMarket/000321109-1?hei=124&wid=124&$large$&DefaultImage=1111111111)
 ## As a conversation Starter
 
 Here are some places I have lived.
@@ -124,6 +123,7 @@ Everything for me, as for many others, revolves around family and faith.
 Gallery of Pics, scroll to the right for more ...
 </comment>
 <div class="image-gallery">
+<img src="{{site.baseur1}}/images/krishna images/mango test.jpg" alt="pleaseeeeeeee">
   <img src="{{site.baseurl}}/images/about/missionary.jpg" alt="Image 1">
   <img src="{{site.baseurl}}/images/about/john_tamara.jpg" alt="Image 2">
   <img src="{{site.baseurl}}/images/about/tamara_fam.jpg" alt="Image 3">
