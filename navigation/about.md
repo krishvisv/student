@@ -130,7 +130,8 @@ Everything for me, as for many others, revolves around family and faith.
 Gallery of Pics, scroll to the right for more ...
 </comment>
 <div class="image-gallery">
-  <img src="e.baseurl}}/images/about/missionary.jpg" alt="Image 1">
+<img src="{{site.baseur1}}/images/krishna_images/mango_test.jpg" alt="pleaseeeeeeee">
+  <img src="{{site.baseurl}}/images/about/missionary.jpg" alt="Image 1">
   <img src="{{site.baseurl}}/images/about/john_tamara.jpg" alt="Image 2">
   <img src="{{site.baseurl}}/images/about/tamara_fam.jpg" alt="Image 3">
   <img src="{{site.baseurl}}/images/about/surf.jpg" alt="Image 4">
