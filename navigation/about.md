@@ -9,9 +9,6 @@ comments: true
 
 ## Here are some of my interests .
 
-<comment>
-i'll figure out images when i get home
-</comment>
 
 - Music
 - Painting
@@ -21,8 +18,10 @@ i'll figure out images when i get home
 - Taco Bell. I love taco bell.
 
 <comment>
-my cultural places
+places i've been
 <comment>
+
+![mango that will work] (images/krishna_images/mango_test.jpg)
 <style>
     /* Style looks pretty compact, 
        - grid-container and grid-item are referenced the code 
@@ -70,7 +69,7 @@ my cultural places
     var http_source = "https://upload.wikimedia.org/wikipedia/commons/";
     var living_in_the_world = [
         {"flag": "0/01/Flag_of_California.svg", "greeting": "Hey", "description": "California - forever"},
-        {"flag": "<p><a href="https://en.wikipedia.org/wiki/File:Flag_of_India.svg#/media/File:Flag_of_India.svg"><img src="https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg" alt="Flag of India.svg" height="600" width="900"></a><br><a href="//en.wikipedia.org/wiki/File:Flag_of_India.svg" title="Public domain in India">PD-India</a>, <a href="https://en.wikipedia.org/w/index.php?curid=23473510">Link</a></p>", "greeting": "Namaste or Namaskaram", "description": "Never lived here but my parents immigrated over in 2003"},
+        {"flag": "/4/41/Flag_of_India.svg", "greeting": "Namaste or Namaskaram", "description": "Never lived here but my parents left in 2003"},
     ];
 
     // 3a. Consider how to update style count for size of container
