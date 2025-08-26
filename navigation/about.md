@@ -17,11 +17,12 @@ comments: true
 - Fashion
 - Taco Bell. I love taco bell.
 
+<img src="https://upload.wikimedia.org/wikipedia/en/b/b3/Taco_Bell_2016.svg" alt="taco bell logo">
+
 <comment>
 places i've been
 <comment>
 
-![mango that will work] (images/krishna_images/mango_test.jpg)
 <style>
     /* Style looks pretty compact, 
        - grid-container and grid-item are referenced the code 
@@ -69,7 +70,7 @@ places i've been
     var http_source = "https://upload.wikimedia.org/wikipedia/commons/";
     var living_in_the_world = [
         {"flag": "0/01/Flag_of_California.svg", "greeting": "Hey", "description": "California - forever"},
-        {"flag": "/4/41/Flag_of_India.svg", "greeting": "Namaste or Namaskaram", "description": "Never lived here but my parents left in 2003"},
+        {"flag": "/4/41/Flag_of_India.svg", "greeting": "Namaste or Namaskaram", "description": "Never lived here but my parents did till 2003"},
     ];
 
     // 3a. Consider how to update style count for size of container
@@ -129,7 +130,7 @@ Everything for me, as for many others, revolves around family and faith.
 Gallery of Pics, scroll to the right for more ...
 </comment>
 <div class="image-gallery">
-<img src="{{site.baseur1}}/images/krishna_images/mango_test.jpg" alt="pleaseeeeeeee">
+<img src="{{site.baseurl}}/images/krishna_images/mango_test.jpg" alt="pleaseeeeeeee">
   <img src="{{site.baseurl}}/images/about/missionary.jpg" alt="Image 1">
   <img src="{{site.baseurl}}/images/about/john_tamara.jpg" alt="Image 2">
   <img src="{{site.baseurl}}/images/about/tamara_fam.jpg" alt="Image 3">
