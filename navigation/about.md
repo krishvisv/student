@@ -20,7 +20,7 @@ comments: true
 <img src="https://upload.wikimedia.org/wikipedia/en/b/b3/Taco_Bell_2016.svg" alt="taco bell logo">
 
 <comment>
-places i've been
+places
 <comment>
 
 <style>
@@ -104,7 +104,8 @@ places i've been
     }
 </script>
 
-### Journey through Life
+
+# Journey through Life
 
 How I Got to Where I Am
 
@@ -122,9 +123,10 @@ How I Got to Where I Am
 
 The mango is an important memento to me realizing i typed baseur1 and not baseurl and finally getting images to work..
 
-- My mother told me that I was Danish, English. and Irish, here is my researched [family tree]({{site.baseurl}}/images/about/familytree.png)
-- My family is pretty big as I have been married twice, my 1st wife passed away.  We have had 5 kids, 4 adopted by me, 1 biological.  Plus, there are three grandkids.  My name to my grandkids is Abuilito.
-- The gallery of pics has some of my family, fun, culture and faith memories.
+- My friends and music are really important to me
+- One of my favorite bands is a local band called Citrus Jr. I go to a lot of their concerts and I love local shows generally, as well as all music
+- There are photos of my friends from across the states, a lot of whom are from the east coast. I met them at a summer program I did at Georgia Tech and I miss them every day
+- Finding time for the people I love always makes me grateful for the life I live and the people I've met
 
 <comment>
 Gallery of Pics, scroll to the right for more ...
@@ -138,4 +140,6 @@ Gallery of Pics, scroll to the right for more ...
   <img src="{{site.baseurl}}/images/krishna_images/mcr.jpg" alt="mcr">
   <img src="{{site.baseurl}}/images/krishna_images/me_and_tanishqa.jpg" alt="driving jk parked">
   <img src="{{site.baseurl}}/images/krishna_images/us_on_christmas.jpg" alt="christmas">
+  <img src="{{site.baseurl}}/images/krishna_images/prom.jpg" alt="prom">
+  <img src="{{site.baseurl}}/images/krishna_images/us_at_citrus.jpg" alt="citrus jr">
 </div>
