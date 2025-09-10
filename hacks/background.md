@@ -5,7 +5,7 @@ title: Background with Object
 description: Use JavaScript to have an in motion background.
 # These are locations of images in this game
 sprite: images/platformer/sprites/flying-ufo.png
-background: <img src="https://www.atlasandboots.com/wp-content/uploads/2021/12/most-beautiful-mountains-in-america-grand-teton.jpg" alt="21 most beautiful mountains in the US | Atlas &amp; Boots"/>
+background: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvFxVqtLxNEQeHuuuKAeVTokymbPfxYykKSCkbMERPU_kcKYeD:https://www.atlasandboots.com/wp-content/uploads/2019/05/ama-dablam2-most-beautiful-mountains-in-the-world.jpg&s
 permalink: /background
 ---
 
