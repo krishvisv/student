@@ -42,15 +42,15 @@ permalink: /rock-paper-scissor/
     </div>
     <div id="images" style="display:flex; justify-content:center; gap:20px; margin-bottom:14px;">
       <button id="rock-btn" style="background:none; border:none; padding:0; cursor:pointer;">
-        <img id="rock-img" src="{{site.baseurl}}/images/rps/rock.jpg"
+        <img id="rock-img" src="{{site.baseurl}}/images/rps/rock-lobster.jpg"
              style="width:100px; border:2px solid white; border-radius:10px;">
       </button>
       <button id="paper-btn" style="background:none; border:none; padding:0; cursor:pointer;">
-        <img id="paper-img" src="{{site.baseurl}}/images/rps/paper.jpeg"
+        <img id="paper-img" src="{{site.baseurl}}/images/rps/paper-planes.png"
              style="width:100px; border:2px solid white; border-radius:10px;">
       </button>
       <button id="scissors-btn" style="background:none; border:none; padding:0; cursor:pointer;">
-        <img id="scissors-img" src="{{site.baseurl}}/images/rps/scissors.jpeg"
+        <img id="scissors-img" src="{{site.baseurl}}/images/rps/cut.jpg"
              style="width:100px; border:2px solid white; border-radius:10px;">
       </button>
     </div>
@@ -148,14 +148,14 @@ permalink: /rock-paper-scissor/
 
   // --- assets ---
   const bgImage = new Image();
-  bgImage.src = '{{site.baseurl}}/images/platformer/backgrounds/alien_planet1.jpg';
+  bgImage.src = '{{site.baseurl}}/images/rps/red-sparkle.gif';
 
   const rockImg = new Image();
-  rockImg.src = '{{site.baseurl}}/images/rps/rock.jpg';
+  rockImg.src = '{{site.baseurl}}/images/rps/rock-lobster.jpg';
   const paperImg = new Image();
-  paperImg.src = '{{site.baseurl}}/images/rps/paper.jpeg';
+  paperImg.src = '{{site.baseurl}}/images/rps/paper-planes.png';
   const scissorsImg = new Image();
-  scissorsImg.src = '{{site.baseurl}}/images/rps/scissors.jpeg';
+  scissorsImg.src = '{{site.baseurl}}/images/rps/cut.jpg';
 
   const bg = new BattleBackground(bgImage, battleCanvas.width, battleCanvas.height, 0.12);
 
@@ -220,7 +220,7 @@ permalink: /rock-paper-scissor/
   ctx.font = "bold 14px 'Press Start 2P', cursive";
   ctx.fillStyle = "cyan";
   ctx.textAlign = "center";
-  ctx.fillText("Animated Battle: OOP", battleCanvas.width/2, 24);
+  ctx.fillText("Animated Battle: FIGHT", battleCanvas.width/2, 24);
   ctx.restore();
 
     if(battle.active){
