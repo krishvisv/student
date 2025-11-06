@@ -17,11 +17,11 @@ comments: true
 - Fashion
 - Taco Bell. I love taco bell.
 
-<img src="https://upload.wikimedia.org/wikipedia/en/b/b3/Taco_Bell_2016.svg" alt="taco bell logo">
+<img src="{{ site.baseurl }}/images/krishna_images/tacobell.png" alt="taco bell logo">
 
 <comment>
 places
-<comment>
+</comment>
 
 <style>
     /* Style looks pretty compact, 
