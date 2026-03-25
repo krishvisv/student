@@ -1,8 +1,8 @@
 ---
 layout: post
 title: API read
-permalink: /api/read/
-show_reading_time: false 
+permalink: /api/read
+show_reading_time: false
 ---
 
 <h1>Flask app access using JavaScript</h1>
