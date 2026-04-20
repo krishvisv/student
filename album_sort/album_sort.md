@@ -108,7 +108,9 @@ permalink: /album-sort
     cursor: grab;
     user-select: none;
     touch-action: none;
-    transition: transform 0.28s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: transform 0.3s cubic-bezier(0.34, 1.4, 0.64, 1),
+                flex 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                opacity 0.15s ease;
   }
 
   .rank-item.no-transition {
@@ -116,7 +118,17 @@ permalink: /album-sort
   }
 
   .rank-item.ghost {
-    opacity: 0.12;
+    opacity: 0.1;
+    transform: scale(0.92);
+    transition: opacity 0.15s ease, transform 0.15s ease;
+  }
+
+  /* Gap-opening effect: items near the insertion point shift outward */
+  .rank-item.shift-right {
+    transform: translateX(6px);
+  }
+  .rank-item.shift-left {
+    transform: translateX(-6px);
   }
 
   .album-cover {
@@ -177,10 +189,17 @@ permalink: /album-sort
   }
 
   #drag-clone .album-cover {
-    transform: scale(1.1) translateY(-6px);
+    transform: scale(1.0) translateY(0px);
+    border-color: var(--border);
+    transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1),
+                box-shadow 0.2s cubic-bezier(0.34, 1.56, 0.64, 1),
+                border-color 0.2s ease;
+  }
+
+  #drag-clone.lifted .album-cover {
+    transform: scale(1.08) translateY(-8px);
     border-color: rgba(255,255,255,0.4) !important;
-    box-shadow: 0 16px 48px rgba(0,0,0,0.75);
-    transition: none;
+    box-shadow: 0 20px 56px rgba(0,0,0,0.85), 0 6px 20px rgba(0,0,0,0.5);
   }
 
   /* Insert indicator */
@@ -191,7 +210,7 @@ permalink: /album-sort
     border-radius: 1px;
     pointer-events: none;
     opacity: 0;
-    transition: opacity 0.1s, left 0.12s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: opacity 0.1s, left 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     z-index: 998;
   }
 
@@ -325,7 +344,7 @@ function renderList(animate) {
     list.appendChild(item);
   }
 
-  // FLIP – play slide from old positions to new
+  // FLIP – play spring slide from old positions to new
   if (animate) {
     list.querySelectorAll('.rank-item').forEach(el => {
       const before = beforeRects[el.dataset.id];
@@ -333,11 +352,8 @@ function renderList(animate) {
       const after = el.getBoundingClientRect();
       const dx = before.left - after.left;
       if (Math.abs(dx) < 1) return;
-      // Jump to old position (no transition yet)
       el.style.transform = `translateX(${dx}px)`;
-      // Force reflow so the browser registers the starting position
-      el.getBoundingClientRect();
-      // Enable transition and animate to natural (0) position
+      el.getBoundingClientRect(); // force reflow
       el.classList.remove('no-transition');
       el.style.transform = '';
     });
@@ -367,12 +383,13 @@ function onPointerDown(e) {
     srcIndex: index,
     offsetX: e.clientX - rect.left,
     offsetY: e.clientY - rect.top,
+    lastInsertIndex: -1,
   };
 
   // Ghost the original
   item.classList.add('ghost', 'no-transition');
 
-  // Set up floating clone
+  // Set up floating clone — start at natural size, then spring to lifted
   const clone = document.getElementById('drag-clone');
   const cloneCover = clone.querySelector('.album-cover');
   cloneCover.innerHTML = coverHTML(currentOrder[index]);
@@ -380,7 +397,16 @@ function onPointerDown(e) {
   cloneCover.style.height = coverRect.height + 'px';
   clone.style.width   = rect.width + 'px';
   clone.style.display = 'flex';
+  clone.classList.remove('lifted');
   positionClone(e.clientX, e.clientY);
+
+  // Slight delay so the transition fires visibly
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => clone.classList.add('lifted'));
+  });
+
+  // Grabbing cursor on body
+  document.body.style.cursor = 'grabbing';
 
   document.addEventListener('pointermove',   onPointerMove);
   document.addEventListener('pointerup',     onPointerUp);
@@ -397,13 +423,29 @@ function positionClone(cx, cy) {
 function onPointerMove(e) {
   if (!dragState) return;
   positionClone(e.clientX, e.clientY);
-  showIndicator(getInsertIndex(e.clientX));
+  const insertIndex = getInsertIndex(e.clientX);
+  showIndicator(insertIndex);
+  updateGapShift(insertIndex);
+}
+
+// ── Procedure: nudge items apart at the insertion point (Chrome-tab style) ───
+function updateGapShift(insertIndex) {
+  if (dragState.lastInsertIndex === insertIndex) return;
+  dragState.lastInsertIndex = insertIndex;
+
+  const items = document.querySelectorAll('.rank-item');
+  items.forEach((el, i) => {
+    el.classList.remove('shift-right', 'shift-left');
+    if (el.classList.contains('ghost')) return;
+    // Item just before insertion point nudges left; item at/after nudges right
+    if (i === insertIndex - 1) el.classList.add('shift-left');
+    else if (i === insertIndex) el.classList.add('shift-right');
+  });
 }
 
 // ── Procedure: determine insert index from cursor X ──────────────────────────
 function getInsertIndex(cursorX) {
   const items = document.querySelectorAll('.rank-item');
-  // Iteration: scan each item to find where cursor sits
   for (let i = 0; i < items.length; i++) {
     const rect = items[i].getBoundingClientRect();
     if (cursorX < rect.left + rect.width / 2) return i;
@@ -446,8 +488,18 @@ function onPointerUp(e) {
   const insertAt  = getInsertIndex(e.clientX);
   const { srcIndex } = dragState;
 
-  document.getElementById('drag-clone').style.display = 'none';
+  // Reset clone and cursor
+  const clone = document.getElementById('drag-clone');
+  clone.classList.remove('lifted');
+  setTimeout(() => { clone.style.display = 'none'; }, 180);
   document.getElementById('insert-indicator').classList.remove('visible');
+  document.body.style.cursor = '';
+
+  // Clear gap shift classes
+  document.querySelectorAll('.rank-item').forEach(el => {
+    el.classList.remove('shift-right', 'shift-left');
+  });
+
   dragState = null;
 
   // Selection: did the position actually change?
@@ -456,7 +508,7 @@ function onPointerUp(e) {
     const finalInsert = insertAt > srcIndex ? insertAt - 1 : insertAt;
     currentOrder.splice(finalInsert, 0, moved);
     clearFeedback();
-    renderList(true); // animate the slide
+    renderList(true);
   } else {
     // No change — just remove ghost
     document.querySelectorAll('.rank-item').forEach(el => {
@@ -470,10 +522,8 @@ function checkOrder() {
   const items = document.querySelectorAll('.rank-item');
   let correctCount = 0;
 
-  // Iteration: evaluate every slot
   for (let i = 0; i < currentOrder.length; i++) {
     items[i].classList.remove('correct-item', 'wrong-item');
-    // Selection: correct position?
     if (currentOrder[i].correctPos === i) {
       items[i].classList.add('correct-item');
       correctCount++;
@@ -483,7 +533,6 @@ function checkOrder() {
   }
 
   const result = document.getElementById('result');
-  // Selection: full marks vs partial
   if (correctCount === 10) {
     result.textContent = 'Perfect rainbow order!';
     result.className = 'correct';
