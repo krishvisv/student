@@ -523,17 +523,16 @@ function checkOrder() {
   let correctCount = 0;
 
   for (let i = 0; i < currentOrder.length; i++) {
+    const isCorrect = currentOrder[i].correctPos === i;
     items[i].classList.remove('correct-item', 'wrong-item');
-    if (currentOrder[i].correctPos === i) {
-      items[i].classList.add('correct-item');
-      correctCount++;
-    } else {
-      items[i].classList.add('wrong-item');
-    }
+    items[i].classList.add(isCorrect ? 'correct-item' : 'wrong-item');
+    if (isCorrect) correctCount++;
   }
 
+  const allCorrect = correctCount === currentOrder.length;
+
   const result = document.getElementById('result');
-  if (correctCount === 10) {
+  if (allCorrect) {
     result.textContent = 'Perfect rainbow order!';
     result.className = 'correct';
   } else {
