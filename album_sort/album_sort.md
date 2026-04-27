@@ -285,7 +285,7 @@ permalink: /album-sort
 <div id="result"></div>
 
 <script>
-// ── Data ──────────────────────────────────────────────────────────────────────
+// Data list
 const ALBUMS = [
   { id:0, title:"Wish",                artist:"The Cure",          src:"{{site.baseurl}}/album_sort/albums/wish_thecure.png", color:"#C0392B", correctPos:0 },
   { id:1, title:"Short Bus",           artist:"Filter",            src:"{{site.baseurl}}/album_sort/albums/shortbus_filter.png", color:"#E05530", correctPos:1 },
@@ -299,11 +299,10 @@ const ALBUMS = [
   { id:9, title:"Pottymouth",          artist:"Bratmobile",        src:"{{site.baseurl}}/album_sort/albums/pottymouth_bratmobile.png", color:"#C2185B", correctPos:9 },
 ];
 
-// ── State ─────────────────────────────────────────────────────────────────────
 let currentOrder = [];
 let dragState = null;
 
-// ── Procedure: Fisher-Yates shuffle ──────────────────────────────────────────
+// Fisher-Yates shuffle
 function shuffleArray(arr) {
   const a = [...arr];
   for (let i = a.length - 1; i > 0; i--) {
@@ -313,13 +312,13 @@ function shuffleArray(arr) {
   return a;
 }
 
-// ── Procedure: inner HTML for an album cover ──────────────────────────────────
+// inner HTML for an album cover
 function coverHTML(album) {
   if (album.src) return `<img src="${album.src}" alt="${album.title} by ${album.artist}">`;
   return `<div class="fallback" style="background:${album.color};"></div>`;
 }
 
-// ── Procedure: render list, optionally with FLIP animation ───────────────────
+// render list, optionally with FLIP animation
 function renderList(animate) {
   const list = document.getElementById('rank-list');
 
@@ -364,12 +363,12 @@ function renderList(animate) {
   }
 }
 
-// ── Procedure: attach pointer listeners to an item ────────────────────────────
+// attach pointer listeners to an item
 function attachPointerListeners(item) {
   item.addEventListener('pointerdown', onPointerDown);
 }
 
-// ── Drag: start ───────────────────────────────────────────────────────────────
+// drag start func
 function onPointerDown(e) {
   if (e.button !== 0 && e.pointerType === 'mouse') return;
   e.preventDefault();
@@ -389,7 +388,7 @@ function onPointerDown(e) {
   // Ghost the original
   item.classList.add('ghost', 'no-transition');
 
-  // Set up floating clone — start at natural size, then spring to lifted
+  // floating clone — start at natural size, then spring to lifted
   const clone = document.getElementById('drag-clone');
   const cloneCover = clone.querySelector('.album-cover');
   cloneCover.innerHTML = coverHTML(currentOrder[index]);
@@ -400,7 +399,7 @@ function onPointerDown(e) {
   clone.classList.remove('lifted');
   positionClone(e.clientX, e.clientY);
 
-  // Slight delay so the transition fires visibly
+  // delay for visible transition
   requestAnimationFrame(() => {
     requestAnimationFrame(() => clone.classList.add('lifted'));
   });
@@ -419,7 +418,7 @@ function positionClone(cx, cy) {
   clone.style.top  = (cy - dragState.offsetY) + 'px';
 }
 
-// ── Drag: move ────────────────────────────────────────────────────────────────
+// move
 function onPointerMove(e) {
   if (!dragState) return;
   positionClone(e.clientX, e.clientY);
@@ -428,7 +427,7 @@ function onPointerMove(e) {
   updateGapShift(insertIndex);
 }
 
-// ── Procedure: nudge items apart at the insertion point (Chrome-tab style) ───
+// shift albums around insertion point
 function updateGapShift(insertIndex) {
   if (dragState.lastInsertIndex === insertIndex) return;
   dragState.lastInsertIndex = insertIndex;
@@ -437,13 +436,12 @@ function updateGapShift(insertIndex) {
   items.forEach((el, i) => {
     el.classList.remove('shift-right', 'shift-left');
     if (el.classList.contains('ghost')) return;
-    // Item just before insertion point nudges left; item at/after nudges right
     if (i === insertIndex - 1) el.classList.add('shift-left');
     else if (i === insertIndex) el.classList.add('shift-right');
   });
 }
 
-// ── Procedure: determine insert index from cursor X ──────────────────────────
+// determine insert index from cursor point
 function getInsertIndex(cursorX) {
   const items = document.querySelectorAll('.rank-item');
   for (let i = 0; i < items.length; i++) {
@@ -453,7 +451,7 @@ function getInsertIndex(cursorX) {
   return items.length;
 }
 
-// ── Procedure: show the white insert line ────────────────────────────────────
+// show the white insert line
 function showIndicator(insertIndex) {
   const indicator = document.getElementById('insert-indicator');
   const items = document.querySelectorAll('.rank-item');
@@ -477,7 +475,7 @@ function showIndicator(insertIndex) {
   indicator.classList.add('visible');
 }
 
-// ── Drag: end ─────────────────────────────────────────────────────────────────
+// Drag: end
 function onPointerUp(e) {
   if (!dragState) return;
 
@@ -502,7 +500,7 @@ function onPointerUp(e) {
 
   dragState = null;
 
-  // Selection: did the position actually change?
+  // did the position actually change, if not remove ghost
   if (insertAt !== srcIndex && insertAt !== srcIndex + 1) {
     const moved = currentOrder.splice(srcIndex, 1)[0];
     const finalInsert = insertAt > srcIndex ? insertAt - 1 : insertAt;
@@ -510,14 +508,12 @@ function onPointerUp(e) {
     clearFeedback();
     renderList(true);
   } else {
-    // No change — just remove ghost
     document.querySelectorAll('.rank-item').forEach(el => {
       el.classList.remove('ghost', 'no-transition');
     });
   }
 }
 
-// ── Procedure: check order against correct positions ─────────────────────────
 function checkOrder() {
   const items = document.querySelectorAll('.rank-item');
   let correctCount = 0;
@@ -550,7 +546,6 @@ function clearFeedback() {
   });
 }
 
-// ── Procedure call: initialise ────────────────────────────────────────────────
 function resetGame() {
   currentOrder = shuffleArray(ALBUMS);
   clearFeedback();
