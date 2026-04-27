@@ -295,7 +295,7 @@ const ALBUMS = [
   { id:5, title:"Weezer (Blue Album)", artist:"Weezer",            src:"{{site.baseurl}}/album_sort/albums/weezer_blue.png", color:"#1565C0", correctPos:5 },
   { id:6, title:"Mellon Collie",       artist:"Smashing Pumpkins", src:"{{site.baseurl}}/album_sort/albums/melloncollie_tsp.png", color:"#0D3B6E", correctPos:6 },
   { id:7, title:"Godlike Snake",       artist:"Ufomammut",         src:"{{site.baseurl}}/album_sort/albums/glsnake_ufomammut.png", color:"#6A1B9A", correctPos:7 },
-  { id:8, title:"So Tonight...",       artist:"Mazzy Star",        src:"{{site.baseurl}}/album_sort/albums/sttims_mazzy.png", color:"#3E0066", correctPos:8 },
+  { id:8, title:"So Tonight",       artist:"Mazzy Star",        src:"{{site.baseurl}}/album_sort/albums/sttims_mazzy.png", color:"#3E0066", correctPos:8 },
   { id:9, title:"Pottymouth",          artist:"Bratmobile",        src:"{{site.baseurl}}/album_sort/albums/pottymouth_bratmobile.png", color:"#C2185B", correctPos:9 },
 ];
 
