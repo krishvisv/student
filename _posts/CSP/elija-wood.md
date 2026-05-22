@@ -16,46 +16,47 @@ comments: true
 
 ## Proof of Experience
 
-Image was uploaded in the interactive version. Add the image file to your blog repository and link it here.
+<img src="{{site.baseurl}}/images/elijah-wood.png" alt="selfie w elija wood">
+
 
 **Caption:**  
-I took this photo in front of the theater tech booth. They told me about how there are often opportunities to help with tech even before pit season for the musical, and how they made some of the props (sewing, painting, etc)
+West took this photo of all of us after the guest speaker. He is in the background, but visible
 
 ## Before the Event
 
-I didn't know what to expect because I didn't know it was a thing. But when I saw the booths, I saw it was mostly an engineering and artistic expo, showcasing the different classes and projects from different highschools
+I didn't know what to expect. I almost missed it because there was so much traffic it was impossible to find parking, I had to run in and couldn't even grab my laptop.
 
 ## Curiosity Before Attending
 
-I was curious about the car framework and the art classes
+I was curious about what the presentation was going to be about. I had heard of SafeBallot but didn't know anything about the CEO or his life
 
 ## What I Saw
 
-I visited the graphic design booth and the theater tech booth
+He made a lot of good points about entrepeneurship and building connections.
 
 ## Most Interesting Thing I Saw
 
-The car that was very barebones and still worked
+Even when he only presenting he was very charismatic. He was good at drawing attention with his demeanor, it was respectable but also light-hearted. Showed he was trustworthy and well-presented.
 
 ## What I Learned
 
-That in the Westview graphic design class they learn how to make zines, which I also love making
+Connections are everything, you need to build up your relationships with the people around you who can offer you things. Make sure you're well connected, it gets you far.
 
 ## What Surprised Me
 
-How many different schools there were and how everyone was knowledgeable and passionate about the expo, as well as how they were kind and willing to share.
+How many business ventures he had.
 
 ## What Inspired Me
 
-The zines from the graphic design booth
+What he said about starting before you're ready inspired me because I often procrastinate if I don't have everything figured out. It was a good reminder that taking the first step is the hardest part, and everything else falls into place ater that.
 
 ## Personal Connection
 
-I have made a few zines before, but I didn't think to do them digitally. I took some of the ones they had shown and I'm excited to use them as reference to hopefully create more zines over summer
+I am likely to end up as a freelancer, or bounce between deals with corporations as a designer. So, being able to leverage connections will be an extremely useful thing for me to have so I can ensure more financial stability and be more sought-after as a designer.
 
 ## Interaction
 
-**Person or group I learned from:** student
+**Person or group I learned from:** Presenter
 
 In theater tech, they were showing me their prop head of Twoie from Little Shop Of Horrors.
 
