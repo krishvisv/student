@@ -1,0 +1,76 @@
+---
+layout: post
+title: "CTE Expo 2026"
+description: "Extra credit event reflection"
+permalink: /cte-expo
+comments: true
+---
+
+# CTE Expo 2026
+
+**Date:** May 21
+
+**Location:** DNHS Quad
+
+**Extra Credit Theme:** What inspired you?
+
+## Proof of Experience
+
+<img src="{{site.baseurl}}/images/theater-tech.png" alt="theater tech photo">
+
+**Caption:**  
+I took this photo in front of the theater tech booth. They told me about how there are often opportunities to help with tech even before pit season for the musical, and how they made some of the props (sewing, painting, etc)
+
+## Before the Event
+
+I didn't know what to expect because I didn't know it was a thing. But when I saw the booths, I saw it was mostly an engineering and artistic expo, showcasing the different classes and projects from different highschools
+
+## Curiosity Before Attending
+
+I was curious about the car framework and the art classes
+
+## What I Saw
+
+I visited the graphic design booth and the theater tech booth
+
+## Most Interesting Thing I Saw
+
+The car that was very barebones and still worked
+
+## What I Learned
+
+That in the Westview graphic design class they learn how to make zines, which I also love making
+
+## What Surprised Me
+
+How many different schools there were and how everyone was knowledgeable and passionate about the expo, as well as how they were kind and willing to share.
+
+## What Inspired Me
+
+The zines from the graphic design booth
+
+## Personal Connection
+
+I have made a few zines before, but I didn't think to do them digitally. I took some of the ones they had shown and I'm excited to use them as reference to hopefully create more zines over summer
+
+## Interaction
+
+**Person or group I learned from:** student
+
+In theater tech, they were showing me their prop head of Twoie from Little Shop Of Horrors.
+
+## Depth of Experience
+
+Showed me more ways I could use my artistic abilities.
+
+## Connection to CS or Future Goals
+
+Design is a factor in coding, especially when making websites with user-input, because things need to be visually pleasing in order for people to want to interact with them
+
+## Final Reflection
+
+Introduced me to other people at different schools, showed how everyone has things in common and how we can all connect over our love of geeking out.
+
+## Biggest Takeaway
+
+> My biggest takeaway was that I need to start learning digital design tools, especially for my future as a designer, which will come in handy.
