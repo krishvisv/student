@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "Elijah Wood Guest Speaker"
+title: "Elijah Johnson Guest Speaker"
 description: "Extra credit event reflection"
-permalink: /elijah-wood
+permalink: /elijah-johnson
 comments: true
 ---
 
-# CTE Expo 2026
+# Elijah Johnson Presentation
 
 **Date:** May 21
 
@@ -58,20 +58,20 @@ I am likely to end up as a freelancer, or bounce between deals with corporations
 
 **Person or group I learned from:** Presenter
 
-In theater tech, they were showing me their prop head of Twoie from Little Shop Of Horrors.
+He was going through his strategies for success, teaching us how he managed to be a young entrepeneur
 
 ## Depth of Experience
 
-Showed me more ways I could use my artistic abilities.
+Showed me more ways I could leverage my bubbly persoality to make good connections and get far in life. I know how to butter people up.
 
 ## Connection to CS or Future Goals
 
-Design is a factor in coding, especially when making websites with user-input, because things need to be visually pleasing in order for people to want to interact with them
+Business is a large factor of design. You have to be able to market yourself and your artistic abilities or creations to businesses or investors to find work
 
 ## Final Reflection
 
-Introduced me to other people at different schools, showed how everyone has things in common and how we can all connect over our love of geeking out.
+Connections connections connections! Know how to get your way into a niche, and take bold steps with confidence
 
 ## Biggest Takeaway
 
-> My biggest takeaway was that I need to start learning digital design tools, especially for my future as a designer, which will come in handy.
+> My biggest takeaway was that I need to start making stronger connections with business people so I can leverage them later
