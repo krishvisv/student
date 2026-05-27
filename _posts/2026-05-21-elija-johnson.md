@@ -2,7 +2,8 @@
 layout: post
 title: "Elijah Johnson Guest Speaker"
 description: "Extra credit event reflection"
-permalink: /elijah-johnson
+permalink: /elijah-johnson/
+type: tangibles
 comments: true
 ---
 
